@@ -26,7 +26,7 @@ export default {
     },
 
     watch: {
-        js: `${srcFolder}/js/index.js`,
+        js: `${srcFolder}/js/**/*.*`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,

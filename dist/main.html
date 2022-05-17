@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220517045519">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220517222919">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=009ddf45-2c26-4085-b0d9-34f7f52cee67&lang=ru_RU&_v=20220517222919" type="text/javascript"></script>
 </head>
 <body>
 	<div class="wrapper">
         <header class="header">
     <div class="header__container">
-        <a href="#" class="header__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+        <a href="#" class="logo header__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
         <div class="menu">
-            <a href="#" class="menu__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+            <a href="#" class="logo menu__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="#" class="link">акции</a></li>
@@ -120,18 +121,526 @@
                     </div>
                 </div>
             </section>
-            <section class="section sale">
-                <div class="sale__container">
+            <section class="section services">
+                <div class="services__container">
                     <div class="s-header">
                         <span class="s-header__label">ПРАЙС ЛИСТ</span>
                         <h2 class="s-header__title">Услуги</h2>
+                    </div>
+                    <div class="s-body services__body">
+                        <div class="services__filter">
+                            <div class="select services__select">
+                                <button class="select-input">
+                                    <span class="select-input__title">Выберите услугу</span>
+                                    <input type="hidden" name="select">
+                                    <span class="select-input__chevron"><svg><use href='./img/sprite.svg#chevron'></use></svg></span>
+                                </button>
+                                <div class="select-dropdown">
+                                    <div class="select-dropdown__list">
+                                        <button class="select-dropdown__item _selected">Основные услуги</button>
+                                        <button class="select-dropdown__item">Химчистка</button>
+                                        <button class="select-dropdown__item">Шиномонтаж</button>
+                                        <button class="select-dropdown__item">Покрытия</button>
+                                        <button class="select-dropdown__item">Полировка</button>
+                                        <button class="select-dropdown__item">Дополнительно</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select services__select">
+                                <button class="select-input">
+                                    <span class="select-input__title">Выберите кузов</span>
+                                    <input type="hidden" name="select">
+                                    <span class="select-input__chevron"><svg><use href='./img/sprite.svg#chevron'></use></svg></span>
+                                </button>
+                                <div class="select-dropdown">
+                                    <div class="select-dropdown__list">
+                                        <button class="select-dropdown__item _selected">Мини седан</button>
+                                        <button class="select-dropdown__item">Седан</button>
+                                        <button class="select-dropdown__item">Кроссовер</button>
+                                        <button class="select-dropdown__item">Пикап</button>
+                                        <button class="select-dropdown__item">Минивен</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider hide-slides services__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service c-service_quest">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                        <div class="ss-quest">
+                                            <h4 class="ss-quest__title">В комплекс входит:</h4>
+                                            <p class="ss-quest__text">мойка кузова, чистка ковриков, очистка пластика в салоне, уборка салона пылесосом, сушка автомобиля, очистка стекол с 2х сторон</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-service c-service_quest">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                        <div class="ss-quest">
+                                            <h4 class="ss-quest__title">В комплекс входит:</h4>
+                                            <p class="ss-quest__text">мойка кузова, чистка ковриков, очистка пластика в салоне, уборка салона пылесосом, сушка автомобиля, очистка стекол с 2х сторон</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service c-service_quest">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                        <div class="ss-quest">
+                                            <h4 class="ss-quest__title">В комплекс входит:</h4>
+                                            <p class="ss-quest__text">мойка кузова, чистка ковриков, очистка пластика в салоне, уборка салона пылесосом, сушка автомобиля, очистка стекол с 2х сторон</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-service c-service_quest">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                        <div class="ss-quest">
+                                            <h4 class="ss-quest__title">В комплекс входит:</h4>
+                                            <p class="ss-quest__text">мойка кузова, чистка ковриков, очистка пластика в салоне, уборка салона пылесосом, сушка автомобиля, очистка стекол с 2х сторон</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-footer services__footer">
+                            <div class="pagination-block">
+                                <div class="pagination services__slider-pagination"></div>
+                            </div>
+                            <a href="#" class="dl-doc reviews__dl-doc">
+                                <div class="icon icon_l dl-doc__icon"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt=""></picture></div>
+                                <div class="dl-doc__content">
+                                    <span class="dl-doc__text">Скачать прайс лист <br>в формате PDF</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section brands">
+                <div class="brands__container">
+                    <div class="s-header brands__header">
+                        <span class="s-header__label">Что мы используем</span>
+                        <h2 class="s-header__title">БРЕНДЫ</h2>
+                    </div>
+                    <div class="brands__body">
+                        <div class="brands__logo"><picture><source srcset="./img/brands/detail.webp" type="image/webp"><img src="./img/brands/detail.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/smart.webp" type="image/webp"><img src="./img/brands/smart.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/koch.webp" type="image/webp"><img src="./img/brands/koch.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/shine-systems.webp" type="image/webp"><img src="./img/brands/shine-systems.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/karcher.webp" type="image/webp"><img src="./img/brands/karcher.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/schildex.webp" type="image/webp"><img src="./img/brands/schildex.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/aisin.webp" type="image/webp"><img src="./img/brands/aisin.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/alkar.webp" type="image/webp"><img src="./img/brands/alkar.png" alt=""></picture></div>
+                        <div class="brands__logo"><picture><source srcset="./img/brands/gyeon.webp" type="image/webp"><img src="./img/brands/gyeon.png" alt=""></picture></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section portfolio">
+                <div class="portfolio__container">
+                    <div class="s-header">
+                        <span class="s-header__label">фотогалерея</span>
+                        <h2 class="s-header__title">НАША РАБОТА</h2>
+                    </div>
+                    <div class="s-body portfolio__body">
+                        <div class="portfolio__slider-container">
+                            <div class="slider portfolio__slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide portfolio__slide">
+                                        <picture><source srcset="./img/portfolio/1.webp" type="image/webp"><img src="./img/portfolio/1.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide portfolio__slide_double">
+                                        <picture><source srcset="./img/portfolio/2.webp" type="image/webp"><img src="./img/portfolio/2.png" alt="" data-zoom></picture>
+                                        <picture><source srcset="./img/portfolio/3.webp" type="image/webp"><img src="./img/portfolio/3.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide">
+                                        <picture><source srcset="./img/portfolio/4.webp" type="image/webp"><img src="./img/portfolio/4.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide portfolio__slide_double">
+                                        <picture><source srcset="./img/portfolio/5.webp" type="image/webp"><img src="./img/portfolio/5.png" alt="" data-zoom></picture>
+                                        <picture><source srcset="./img/portfolio/6.webp" type="image/webp"><img src="./img/portfolio/6.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide">
+                                        <picture><source srcset="./img/portfolio/7.webp" type="image/webp"><img src="./img/portfolio/7.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide portfolio__slide_double">
+                                        <picture><source srcset="./img/portfolio/8.webp" type="image/webp"><img src="./img/portfolio/8.png" alt="" data-zoom></picture>
+                                        <picture><source srcset="./img/portfolio/9.webp" type="image/webp"><img src="./img/portfolio/9.png" alt="" data-zoom></picture>
+                                    </div>
+                                    <div class="swiper-slide portfolio__slide">
+                                        <picture><source srcset="./img/portfolio/10.webp" type="image/webp"><img src="./img/portfolio/10.png" alt="" data-zoom></picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-footer portfolio__footer">
+                            <div class="pagination-block">
+                                <div class="pagination portfolio__slider-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section reviews">
+                <div class="reviews__container">
+                    <div class="s-header">
+                        <span class="s-header__label">нас благодарят</span>
+                        <h2 class="s-header__title">ОТЗЫВЫ</h2>
+                    </div>
+                    <div class="s-body reviews__body">
+                        <div class="slider hide-slides reviews__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="c-reviews">
+                                        <p class="c-reviews__text">Детейлинг салона сделали за два дня. Отдал машину и забрал. Все расчетные документы в конце я получил. Абсолютно доволен результатом, получил именно то, что хотел. Хорошая студия. Общительный персонал, на все вопросы ответили, помогли</p>
+                                        <div class="c-reviews__user">
+                                            <div class="c-reviews__avatar"><picture><source srcset="./img/reviews/users/1.webp" type="image/webp"><img src="./img/reviews/users/1.png" alt=""></picture></div>
+                                            <div class="c-reviews__info">
+                                                <span class="c-reviews__name">Алексей К.</span>
+                                                <div class="c-reviews__rating">
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                </div>
+                                                <a href="#" class="c-reviews__social">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="c-reviews">
+                                        <p class="c-reviews__text">Детейлинг салона сделали за два дня. Отдал машину и забрал. Все расчетные документы в конце я получил. Абсолютно доволен результатом, получил именно то, что хотел. Хорошая студия. Общительный персонал, на все вопросы ответили, помогли</p>
+                                        <div class="c-reviews__user">
+                                            <div class="c-reviews__avatar"><picture><source srcset="./img/reviews/users/2.webp" type="image/webp"><img src="./img/reviews/users/2.png" alt=""></picture></div>
+                                            <div class="c-reviews__info">
+                                                <span class="c-reviews__name">Алексей К.</span>
+                                                <div class="c-reviews__rating">
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                </div>
+                                                <a href="#" class="c-reviews__social">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="c-reviews">
+                                        <p class="c-reviews__text">Детейлинг салона сделали за два дня. Отдал машину и забрал. Все расчетные документы в конце я получил. Абсолютно доволен результатом, получил именно то, что хотел. Хорошая студия. Общительный персонал, на все вопросы ответили, помогли</p>
+                                        <div class="c-reviews__user">
+                                            <div class="c-reviews__avatar"><picture><source srcset="./img/reviews/users/3.webp" type="image/webp"><img src="./img/reviews/users/3.png" alt=""></picture></div>
+                                            <div class="c-reviews__info">
+                                                <span class="c-reviews__name">Алексей К.</span>
+                                                <div class="c-reviews__rating">
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                </div>
+                                                <a href="#" class="c-reviews__social">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="c-reviews">
+                                        <p class="c-reviews__text">Детейлинг салона сделали за два дня. Отдал машину и забрал. Все расчетные документы в конце я получил. Абсолютно доволен результатом, получил именно то, что хотел. Хорошая студия. Общительный персонал, на все вопросы ответили, помогли</p>
+                                        <div class="c-reviews__user">
+                                            <div class="c-reviews__avatar"><picture><source srcset="./img/reviews/users/4.webp" type="image/webp"><img src="./img/reviews/users/4.png" alt=""></picture></div>
+                                            <div class="c-reviews__info">
+                                                <span class="c-reviews__name">Алексей К.</span>
+                                                <div class="c-reviews__rating">
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                </div>
+                                                <a href="#" class="c-reviews__social">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="c-reviews">
+                                        <p class="c-reviews__text">Детейлинг салона сделали за два дня. Отдал машину и забрал. Все расчетные документы в конце я получил. Абсолютно доволен результатом, получил именно то, что хотел. Хорошая студия. Общительный персонал, на все вопросы ответили, помогли</p>
+                                        <div class="c-reviews__user">
+                                            <div class="c-reviews__avatar"><picture><source srcset="./img/reviews/users/4.webp" type="image/webp"><img src="./img/reviews/users/4.png" alt=""></picture></div>
+                                            <div class="c-reviews__info">
+                                                <span class="c-reviews__name">Алексей К.</span>
+                                                <div class="c-reviews__rating">
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star _active"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                    <div class="c-reviews__star"><svg><use href='./img/sprite.svg#star'></use></svg></div>
+                                                </div>
+                                                <a href="#" class="c-reviews__social">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-footer reviews__footer">
+                            <div class="pagination-block">
+                                <div class="pagination reviews__slider-pagination"></div>
+                            </div>
+                            <a href="#" class="dl-doc reviews__dl-doc">
+                                <div class="icon icon_l dl-doc__icon"><svg><use href='./img/sprite.svg#yandex'></use></svg></div>
+                                <div class="dl-doc__content">
+                                    <span class="dl-doc__text">Скачать сетификат <br>от Яндекс «Я, хорошее место»</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section faq">
+                <div class="faq__container">
+                    <div class="s-header">
+                        <span class="s-header__label">Мы ответили на</span>
+                        <h2 class="s-header__title">ЧАСТЫЕ ВОПРОСЫ</h2>
+                    </div>
+                    <div class="faq__body">
+                        <div class="faq-block faq__main">
+                            <div class="acc-list" data-acc-hidden-sibling>
+                                <div class="acc faq-acc acc_show" data-img-thumb="./img/faq/questions/1.png">
+                                    <button class="acc__toggle" data-acc-toggle>
+                                        <span class="acc__toggle-title">Что входит в услуги детейлинга?</span>
+                                        <span class="icon icon_m acc__toggle-icon"><svg><use href='./img/sprite.svg#chevron'></use></svg></span>
+                                    </button>
+                                    <div class="acc__body" data-acc-body>
+                                        <div class="acc__content">
+                                            <p>Мы предлагаем полный спектр операций, мойку, химчистку салона, моторного отсека и багажного отделения, полировку и покрытие полимерным составом. Выполняем все необходимые работы для поддержания идеального внешнего и внутреннего состояния автомобиля, создания респектабельного внешнего вида и лоска.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc faq-acc" data-img-thumb="./img/faq/questions/2.png">
+                                    <button class="acc__toggle" data-acc-toggle>
+                                        <span class="acc__toggle-title">Какие виды детейлинга вы предлагаете?</span>
+                                        <span class="icon icon_m acc__toggle-icon"><svg><use href='./img/sprite.svg#chevron'></use></svg></span>
+                                    </button>
+                                    <div class="acc__body" data-acc-body>
+                                        <div class="acc__content">
+                                            <p>Мы предлагаем полный спектр операций, входящих в услуги детейлинга – отсека и багажного отделения, полировку и покрытие полимерным составом. Выполняем все необходимые работы для поддержания идеального внешнего и внутреннего состояния автомобиля, создания респектабельного внешнего вида и лоска.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc faq-acc" data-img-thumb="./img/faq/questions/3.png">
+                                    <button class="acc__toggle" data-acc-toggle>
+                                        <span class="acc__toggle-title">в любое время можно приезжать или у вас по записи?</span>
+                                        <span class="icon icon_m acc__toggle-icon"><svg><use href='./img/sprite.svg#chevron'></use></svg></span>
+                                    </button>
+                                    <div class="acc__body" data-acc-body>
+                                        <div class="acc__content">
+                                            <p>Мы предлагаем полный спектр операций, входящих в услуги детейлинга – многофазную мойку, химчистку салона, моторного отсека и багажного отделения, полировку и покрытие полимерным составом. Выполняем все необходимые работы для поддержания идеального внешнего и внутреннего состояния автомобиля, создания респектабельного внешнего вида и лоска.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-write">
+                                <div class="faq-write__content">
+                                    <h3 class="faq-write__title">Остались вопросы?</h3>
+                                    <p class="faq-write__text">Тогда просто напишите нам и мы ответим на все интересущие Вас вопросы.</p>
+                                    <button class="btn faq-write__btn">Написать</button>
+                                </div>
+                                <div class="faq-write__img"><picture><source srcset="./img/faq/faq-monument.webp" type="image/webp"><img src="./img/faq/faq-monument.png" alt=""></picture></div>
+                            </div>
+                        </div>
+                        <div class="faq-block faq-preview">
+                            <div class="faq-preview__img"><img alt=""></div>
+                            <div class="faq-preview__content"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section contacts">
+                <div class="contacts__container">
+                    <div class="s-header">
+                        <span class="s-header__label">Связаться с нами</span>
+                        <h2 class="s-header__title">КОНТАКТЫ</h2>
+                    </div>
+                    <div class="contacts__body">
+                        <div class="contacts__card-list">
+                            <div class="c-contacts">
+                                <div class="icon icon_m c-contacts__icon"><svg><use href='./img/sprite.svg#location'></use></svg></div>
+                                <p class="c-contacts__text">Санкт-Петербург, <br>пр. Непокорённых, 66а</p>
+                            </div>
+                            <div class="c-contacts">
+                                <div class="icon icon_m c-contacts__icon"><svg><use href='./img/sprite.svg#work-time'></use></svg></div>
+                                <p class="c-contacts__text">Пн-пт <span>08:00-20:00</span>, <br>сб <span>09:00-17:00</span></p>
+                            </div>
+                            <a href="#" class="c-contacts">
+                                <div class="icon icon_m c-contacts__icon"><svg><use href='./img/sprite.svg#email'></use></svg></div>
+                                <p class="c-contacts__text">Chistonclean@gmail.com</p>
+                            </a>
+                            <a href="#" class="c-contacts c-contacts_phone">
+                                <div class="icon icon_m c-contacts__icon"><svg><use href='./img/sprite.svg#phone'></use></svg></div>
+                                <p class="c-contacts__text">+7 (812) 999-99-99</p>
+                            </a>
+                        </div>
+                        <div class="contacts__map">
+                            <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad17d18ee663084097ba281b2e9f26b23447f67ec6396ff7b443275b744af9029&amp;lang=ru_RU&amp;scroll=false&_v=20220517222919"></script>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
         
         <footer class="footer">
-    
+    <div class="footer__container">
+        <div class="footer__info">
+            <a href="#" class="logo footer__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt=""></picture></a>
+            <p class="copyright footer__copyright">© 2017 - 2022 Детейлинг центр «Chiston auto» Все материалы данного сайта являются объектами авторского права <br>(в том числе дизайн).</p>
+        </div>
+        <nav class="footer__menu">
+            <ul class="footer__menu-list">
+                <li><a href="#" class="link">услуги</a></li>
+                <li><a href="#" class="link">контакты</a></li>
+                <li><a href="#" class="link">акции</a></li>
+                <li><a href="#" class="link">бренды</a></li>
+                <li><a href="#" class="link">отзывы</a></li>
+                <li><a href="#" class="link">галерея</a></li>
+            </ul>
+        </nav>
+        <div class="social footer__social">
+            <a href="#" class="social__link"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+            <a href="#" class="social__link"><svg><use href='./img/sprite.svg#telegram'></use></svg></a>
+            <a href="#" class="social__link"><svg><use href='./img/sprite.svg#whatsapp'></use></svg></a>
+        </div>
+        <div class="footer__docs">
+            <a href="#" class="dl-doc reviews__dl-doc">
+                <div class="icon icon_l dl-doc__icon"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt=""></picture></div>
+                <div class="dl-doc__content">
+                    <span class="dl-doc__text">Скачать прайс <br>лист в формате PDF</span>
+                </div>
+            </a>
+            <a href="#" class="dl-doc reviews__dl-doc">
+                <div class="icon icon_l dl-doc__icon"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt=""></picture></div>
+                <div class="dl-doc__content">
+                    <span class="dl-doc__text">Скачать юр. информацию <br>о компании PDF</span>
+                </div>
+            </a>
+            <a href="#" class="dl-doc reviews__dl-doc">
+                <div class="icon icon_l dl-doc__icon"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt=""></picture></div>
+                <div class="dl-doc__content">
+                    <span class="dl-doc__text">Скачать прибоную <br>сертификацию PDF</span>
+                </div>
+            </a>
+        </div>
+    </div>
 </footer>
 	</div>
 
@@ -144,6 +653,7 @@
         <div class="modal__bg"></div>
     </div>
 </div>
-    <script src="./js/bundle.min.js?_v=20220517045519"></script>
+    <!-- <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=009ddf45-2c26-4085-b0d9-34f7f52cee67&_v=20220517222919"></script> -->
+    <script src="./js/bundle.min.js?_v=20220517222919"></script>
 </body>
 </html>
