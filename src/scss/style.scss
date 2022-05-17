@@ -168,7 +168,6 @@ body {
 @import "./sections/contacts";
 @import "./sections/footer";
 
-
-// Стили для отдельных страниц
-
-// INFO: Тестовые стили. Все что ниже нужно удалить в новом проекте
+// Модальные окна
+@import "./components/modals/nfp";
+@import "./components/modals/get-sale";

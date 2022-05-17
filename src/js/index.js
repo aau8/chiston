@@ -1,8 +1,8 @@
 import { find, findAll, removeAllClasses, bodyLockToggle } from "./utils/functions.js";
 import "./render.js";
 import "./sliders.js";
+import "./modals.js";
 // import "./menu.js";
-// import "./modals.js";
 
 const menu = document.querySelector('.menu'),
       burger = document.querySelector('.burger')

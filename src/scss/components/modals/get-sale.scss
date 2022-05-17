@@ -1,0 +1,59 @@
+.get-sale__body {
+
+}
+
+.get-sale__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 65px;
+
+    @media (max-width: 880px) {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 20px 32px;
+    }
+}
+
+// Блок
+.gs-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.gs-block__phone {
+
+    & .gs-block__link {
+        font-size: 25px;
+
+        @media (max-width: $mobile-l) {
+            font-size: 22px;
+        }
+    }
+}
+
+.gs-block__title {
+    font-weight: 400;
+    color: $text-second;
+}
+
+.gs-block__content {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.gs-block__link {
+    white-space: nowrap;
+}
+
+.gs-block__social {
+
+}
+
+.social__link {
+
+}
+
+.get-sale__hint {
+    margin-top: 66px;
+}

@@ -1,8 +1,91 @@
-<div class="modal" data-modal-id="modal">
+<!-- <div class="modal" data-modal-id="modal">
     <div class="modal__wrap">
         <div class="modal__window">
             
-            <!-- <button class="modal-close"><img src="@img/sign-in/close.png" alt=""></button> -->
+            <button class="modal-close" data-modal-close><img src="@img/sign-in/close.png" alt=""></button>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div> -->
+
+<!-- Страница не найдена -->
+<div class="modal nfp" data-modal-id="not-found-page">
+    <div class="modal__wrap nfp__wrap">
+        <div class="modal__window nfp__window">
+            <div class="nfp__img"><img src="@img/404.png" alt=""></div>
+            <div class="nfp__content">
+                <p class="nfp__text">К сожалению, запрашиваемая страница не найдена. Возможно, Вы перешли <br>по ссылке, в которой была допущена ошибка, или ресурс был удален. <br>Попробуйте перейти на главную страницу </p>
+                <button class="btn nfp__btn" data-modal-close>На главную</button>
+            </div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>
+
+<!-- Получить скидку -->
+<div class="modal get-sale" data-modal-id="get-sale" data-close-on-bg>
+    <div class="modal__wrap get-sale__wrap">
+        <div class="modal__window get-sale__window">
+            <div class="modal__header">
+                <h2 class="modal__title">Для получения скидки свяжитесь <br>с нами любым удобным для Вас способом:</h2>
+                <button class="modal__close" data-modal-close><svg><use href='./img/sprite.svg#close'></use></svg></button>
+            </div>
+            <div class="get-sale__body">
+                <div class="get-sale__list">
+                    <div class="gs-block gs-block__phone">
+                        <span class="gs-block__title">Наш номер телефона:</span>
+                        <div class="gs-block__content">
+                            <a href="tel:+78129999999" class="link gs-block__link">+7 (812) 999-99-99</a>
+                        </div>
+                    </div>
+                    <div class="gs-block">
+                        <span class="gs-block__title">Мы в социальных сетях:</span>
+                        <div class="gs-block__content">
+                            <div class="social gs-block__social">
+                                <a href="#" class="social__link"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+                                <a href="#" class="social__link"><svg><use href='./img/sprite.svg#telegram'></use></svg></a>
+                                <a href="#" class="social__link"><svg><use href='./img/sprite.svg#whatsapp'></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gs-block">
+                        <span class="gs-block__title">Наш mail:</span>
+                        <div class="gs-block__content">
+                            <a href="mailto:Chistonclean@gmail.com" class="link gs-block__link">Chistonclean@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="get-sale__hint">Также, Вы можете оставить заявку, <br>и Вам перезвонит наш менеджер </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn get-sale__btn" data-modal-open="callback">Оставить заявку</button>
+            </div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>
+
+<!-- Заявка на обратный звонок -->
+<div class="modal callback" data-modal-id="callback" data-close-on-bg>
+    <div class="modal__wrap callback__wrap">
+        <div class="modal__window callback__window">
+            <div class="modal__header">
+                <h2 class="modal__title">Пожалуйста, заполните поля ниже:</h2>
+                <button class="modal__close" data-modal-close><svg><use href='./img/sprite.svg#close'></use></svg></button>
+            </div>
+            <div class="callback__body">
+                <div class="callback-block">
+                    <div class="tf">
+                        <label>
+                            <span>Ваше имя:</span>
+                            <input type="text" id="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn callback__btn">Отправить</button>
+            </div>
         </div>
         <div class="modal__bg"></div>
     </div>

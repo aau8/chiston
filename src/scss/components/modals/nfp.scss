@@ -1,0 +1,37 @@
+.nfp {
+
+}
+
+.nfp__wrap {
+
+}
+
+.nfp__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+}
+
+.nfp__img {
+    max-width: 412px;
+    width: 100%;
+}
+
+.nfp__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.nfp__text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nfp__btn {
+    width: 193px;
+    margin-top: 25px;
+}
