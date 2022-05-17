@@ -1,0 +1,48 @@
+.portfolio__slider-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 36%;
+
+        @media (max-width: 680px) {
+            padding-top: 50%;
+        }
+
+        @media (max-width: 600px) {
+            padding-top: 70%;
+        }
+
+        @media (max-width: $mobile-l) {
+            padding-top: 100%;
+        }
+    }
+}
+
+.portfolio__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.portfolio__slide {
+    width: 100%;
+    // height: 100%;
+    margin-right: 25px;
+
+    & img {
+        border-radius: $radius;
+        overflow: hidden;
+        user-select: none;
+    }
+
+    &_double {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 25px;
+    }
+}

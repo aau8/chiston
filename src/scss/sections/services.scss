@@ -1,0 +1,74 @@
+
+
+// Фильтр
+.services__filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -6px -12px;
+}
+
+.services__select {
+    width: fit-content;
+    margin: 6px 12px;
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.services__slider {
+    width: 100%;
+    margin-top: 25px;
+
+    & .c-service {
+        height: calc((100% - 30px) / 2) !important;
+    }
+}
+
+.services__slide {
+    display: flex;
+    flex-direction: column;
+    transition: $tr;
+
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    & > * {
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    // @media (min-width: 990px) {
+    //     opacity: .15;
+        
+    //     &.swiper-slide-active,
+    //     &.swiper-slide-active + *,
+    //     &.swiper-slide-active + * + *,
+    //     &.swiper-slide-active + * + * + * {
+    //         opacity: 1;
+    //     }
+    // }
+}
+
+.services__footer {
+
+    // @media (max-width: $mobile-l) {
+    //     flex-direction: column;
+    //     align-items: center;
+
+    //     & > * {
+
+    //         &:not(:last-child) {
+    //             margin-bottom: 16px;
+    //         }
+    //     }
+    // }
+}
+
+.services__dl-doc {
+    // max-width: 200px;
+}

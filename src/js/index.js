@@ -1,5 +1,6 @@
 import { find, findAll, removeAllClasses, bodyLockToggle } from "./utils/functions.js";
 import "./render.js";
+import "./sliders.js";
 // import "./menu.js";
 // import "./modals.js";
 
@@ -10,6 +11,72 @@ burger.addEventListener('click', e => {
     menu.classList.toggle('_show')
     burger.classList.toggle('_active')
     bodyLockToggle()
+})
+
+
+// Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
+zoomInImg()
+function zoomInImg() {
+    const TR = 300
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (target.getAttribute('data-zoom') != null) {
+            const imgSrc = target.getAttribute("src")
+            const bigImg = document.createElement("div")
+
+        
+            bigImg.classList.add("big-img")
+            bigImg.style.setProperty('--zoom-img-transition', TR + 'ms')
+        
+            bigImg.innerHTML = `<div class="big-img__body" data-zoom-out><img src="${imgSrc}" style="max-width:${target.naturalWidth}px;" alt=""></div>`
+        
+            document.querySelector(".wrapper").append(bigImg)
+        
+            setTimeout(() => {
+                bigImg.classList.add("_show")
+            }, 1)
+        
+            document.body.classList.add("_lock")
+        }
+
+        if (target.getAttribute('data-zoom-out') != null || target.closest('[data-zoom-out]')) {
+            const bigImg = target.closest('.big-img')
+
+            bigImg.classList.remove("_show")
+            document.body.classList.remove("_lock")
+
+            setTimeout(() => {
+                bigImg.remove()
+            }, TR)
+        }
+    })
+
+    // Закрыть увеличенное изображение
+    const zoomOutImgElems = document.querySelectorAll("[data-zoom-out]")
+    
+    zoomOutImgElems.forEach((zoomOutImg) => {
+        zoomOutImg.addEventListener("click", () => {
+        })
+    })
+}
+
+// Показать больше инфы при клике по иконке вопроса в разделе "Услуги"
+const cardElems = document.querySelectorAll('.c-service_quest')
+
+window.addEventListener('click', e => {
+    const target = e.target
+
+    if (target.classList.contains('s-service__quest-icon')) {
+        const card = target.closest('.c-service_quest')
+
+        card.classList.add('_show-answer')
+
+        card.addEventListener('mouseleave', e => {
+            card.classList.remove('_show-answer')
+        })
+    }
 })
 
 // Стрелка "Наверх"

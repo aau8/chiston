@@ -30,16 +30,20 @@
 }
 
 .header__logo {
-    height: 75px;
-
-    @media (max-width: $container-width + px) {
-        height: 60px;
-    }
 
     @media (max-width: $mobile-l) {
         display: none;
     }
 }
+
+.menu__logo {
+    display: none;
+    
+    @media (max-width: $mobile-l) {
+        display: block;
+    }
+}
+
 
 // Меню
 .menu {
@@ -76,16 +80,6 @@
             opacity: 1;
             visibility: visible;
         }
-    }
-}
-
-.menu__logo {
-    display: none;
-    
-    @media (max-width: $mobile-l) {
-        width: fit-content;
-        height: 60px;
-        display: inline-block;
     }
 }
 

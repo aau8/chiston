@@ -8,4 +8,10 @@
 @import "./base/modal";
 
 // Аккордеоны (Спойлеры)
-// @import "./elements/accordion";
+@import "./base/accordion";
+
+// Слайдер Swiper
+@import "./base/swiper";
+
+// Увеличение изображений
+@import "./base/zoom-in-img";

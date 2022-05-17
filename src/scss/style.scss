@@ -19,7 +19,7 @@ $accent: #559F11;
 $accent-active: brig-color($accent, active);
 
 // Задний фон разделов
-$frame-color: #1C2025;
+$frame-primary: #1C2025;
 $frame-dark: #161A1F;
 $frame-light: #22272D;
 // $frame-light: #0E1010;
@@ -35,6 +35,8 @@ $tf-label: $text-second;
 
 // Цвета кнопок в файле 'scss/elements/button.scss'
 // ================ Colors End ================
+
+$radius: 7px;
 
 
 // ================ Responsive Start ================
@@ -141,24 +143,29 @@ body {
 // 	}
 // }
 
-// @import "grid"; // Сетка
+// Библиотеки
+// @import "./libs/swiper";
 
-// // Элементы
-// @import "./elements/buttons";
-// @import "./elements/select";
-// @import "./elements/textfield";
-
+// Общие стили проекта
+@import "./common";
 
 // Базовые стили, шаблоны, заготовки
 @import "./base";
 
-// Общие стили проекта
-@import "./common";
+// Компоненты
+@import "./components/cards/c-service";
+@import "./components/cards/c-reviews";
+@import "./components/cards/c-contacts";
 
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
 @import "./sections/sale";
+@import "./sections/services";
+@import "./sections/brands";
+@import "./sections/portfolio";
+@import "./sections/faq"; 
+@import "./sections/contacts";
 @import "./sections/footer";
 
 

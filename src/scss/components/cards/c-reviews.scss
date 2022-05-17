@@ -1,0 +1,90 @@
+.c-reviews {
+    background: $frame-dark;
+    border-radius: 7px;
+    padding: 24px;
+}
+
+.c-reviews__text {
+    font-weight: 400;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 17V10.4116C0 7.53867 0.716254 5.43923 2.14876 4.11326C3.58127 2.78729 5.66116 2.08287 8.38843 2L9.00826 5.02486C6.33609 5.35635 5 6.55801 5 8.62984V8.91989H8.05785V17H0ZM10.9504 17V10.4116C10.9504 7.53867 11.6667 5.43923 13.0992 4.11326C14.5592 2.78729 16.6391 2.08287 19.3388 2L20 5.02486C17.3003 5.35635 15.9504 6.58564 15.9504 8.71271V8.91989H19.0083V17H10.9504Z\" fill=\"%23559F11\"/%3E%3C/svg%3E");
+        margin-bottom: 10px;
+    }
+}
+
+.c-reviews__user {
+    display: flex;
+    margin-top: 25px;
+}
+
+.c-reviews__avatar {
+    position: relative;
+    width: 70px;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.c-reviews__info {
+    margin: auto 0 auto 25px;
+}
+
+.c-reviews__name {
+    font-weight: 500;
+}
+
+.c-reviews__rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.c-reviews__star {
+    width: 16px;
+    height: 16px;
+
+    & svg {
+        fill: rgba(255,255,255,.33);
+
+    }
+
+    &._active {
+
+        & svg {
+            fill: $accent;
+        }
+    }
+}
+
+.c-reviews__social {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    border-bottom: 1px dashed $text-primary;
+    transition: $tr;
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}

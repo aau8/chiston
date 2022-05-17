@@ -1,0 +1,166 @@
+.faq__body {
+    display: flex;
+    margin: 0 -12px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.faq-block {
+    width: 50%;
+    margin: 0 12px;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+// Превью
+.faq-preview {
+    border-radius: $radius;
+    background: $frame-dark;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.faq-preview__img {
+    position: relative;
+    width: 100%;
+    
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 53%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.faq-preview__content {
+    font-weight: 400;
+    color: $text-second;
+    padding: 25px;
+}
+
+// Остались вопросы
+.faq-write {
+    position: relative;
+    background: $frame-dark;
+    border-radius: $radius;
+    padding: 25px;
+    margin-top: 25px;
+    overflow: hidden;
+
+    @media (max-width: $mobile-l) {
+        background: none;
+        padding: 0;
+        margin-top: 50px;
+    }
+}
+
+.faq-write__content {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+
+    @media (max-width: $mobile-l) {
+        width: 100%;
+    }
+}
+
+.faq-write__title {
+    font-size: 42px;
+    line-height: 1.2;
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 23px;
+    }
+}
+
+.faq-write__text {
+    max-width: 220px;
+    font-weight: 400;
+    color: $text-second;
+    margin-top: 15px;
+
+    @media (max-width: $mobile-l) {
+        max-width: 198px;
+        font-size: 15px;
+    }
+}
+
+.faq-write__btn {
+    width: 193px;
+    margin-top: 15px;
+
+    @media (max-width: $mobile-l) {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.faq-write__img {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    max-width: 220px;
+    width: 100%;
+
+    @media (max-width: 500px) {
+        right: -40px;
+    }
+
+    @media (max-width: $mobile-l) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 37px;
+        left: 18px;
+        z-index: -1;
+        width: 225px;
+        height: 225px;
+        background: $accent;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 33px;
+        width: 35px;
+        height: 25px;
+        transform: translate(10px, 10px) scale(0);
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"38\" height=\"30\" viewBox=\"0 0 38 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M15.0422 27.2378L4.1046 18.1484M21.5925 17.7329L10.9511 3.06111\" stroke=\"%23559F11\" stroke-width=\"3\"/%3E%3Cpath d=\"M30.9486 14.4232L27.1938 0.788691\" stroke=\"%23559F11\" stroke-width=\"3\"/%3E%3C/svg%3E");
+        animation: showMonumentWow .2s ease-in-out forwards;
+
+        @keyframes showMonumentWow {
+            from {
+                transform: translate(10px, 10px) scale(0);
+            }
+
+            to {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+    }
+}

@@ -9,8 +9,8 @@
     font-size: 20px;
     font-weight: 700;
     padding: 0 18px;
-    background: $frame-color;
-    border-radius: 7px;
+    background: $frame-primary;
+    border-radius: $radius;
     transition: $tr;
     white-space: nowrap;
 
@@ -28,7 +28,7 @@
         transform: translate(-50%, -50%);
         width: calc(100% + 2px);
         height: calc(100% + 2px);
-        border-radius: 7px;
+        border-radius: $radius;
     }
     
     &::before {

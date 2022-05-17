@@ -101,15 +101,34 @@ acc()
 // data-acc-body - тело аккордеона
 // data-acc-hidden-sibling - аккордеоны будут скрываться при выборе других аккордеонов. !Атрибут указывается у контейнера (acc-list), в котором находятся аккордеоны
 export function acc() {
+    const preview = document.querySelector('.faq-preview')
+    const previewImg = preview.querySelector('.faq-preview__img img')
+    const previewContent = preview.querySelector('.faq-preview__content')
     
     window.addEventListener("click", (e) => {
 
         if (e.target.getAttribute('data-acc-toggle') || e.target.closest('[data-acc-toggle]')) {
-            const accToggle = e.target
-            const accContainer = !accToggle.closest("[data-acc-body]") ? accToggle.parentElement.parentElement : accToggle.closest("[data-acc-body]")
-            const accElem = accToggle.parentElement
-            const accBody = accToggle.nextElementSibling
-    
+            doAcc(e.target)
+        }
+    })
+
+    if (document.querySelector('.acc_show')) {
+        const accToggleElems = document.querySelectorAll('.acc_show .acc__toggle')
+
+        for (let i = 0; i < accToggleElems.length; i++) {
+            const accToggle = accToggleElems[i];
+
+            doAcc(accToggle)
+            accToggle.parentElement.classList.add("acc_show")
+        }
+    }
+
+    function doAcc(accToggle) {
+        const accContainer = !accToggle.closest("[data-acc-body]") ? accToggle.parentElement.parentElement : accToggle.closest("[data-acc-body]")
+        const accElem = accToggle.parentElement
+        const accBody = accToggle.nextElementSibling
+        
+        if (window.innerWidth <= 768) {
             accElem.classList.toggle("acc_show")
     
             if (accBody.style.maxHeight) {
@@ -120,7 +139,7 @@ export function acc() {
                 const accHiddenSibling = accContainer.dataset.accHiddenSibling
     
                 if (accHiddenSibling != undefined && accHiddenSibling != 'false') {
-
+    
                     for (let i = 0; i < adjacentElems.length; i++) {
                         const elem = adjacentElems[i]
                         const elemHeader = elem.querySelector("[data-acc-toggle]")
@@ -136,7 +155,18 @@ export function acc() {
                 accContainer.style.maxHeight = parseInt(accContainer.scrollHeight) + accBody.scrollHeight + "px"
             }
         }
-    })
+        else {
+            const accContent = accBody.querySelector('.acc__content')
+            const accElems = accContainer.querySelectorAll('.acc')
+            const accImg = accElem.dataset.imgThumb
+    
+            removeAllClasses(accElems, 'acc_show')
+            accElem.classList.add('acc_show')
+    
+            previewContent.innerHTML = accContent.innerHTML
+            previewImg.src = accImg
+        }
+    }
 }
 //========================================================================================================================================================
 

@@ -1,0 +1,70 @@
+.c-contacts {
+    display: flex;
+    align-items: center;
+    background: $frame-dark;
+    border-radius: $radius;
+    padding: 8px 24px;
+
+    @media (max-width: 650px) {
+        padding: 25px 20px;
+    }
+
+    &_phone {
+
+        & .c-contacts__text {
+            font-size: 25px;
+            font-weight: 700;
+            color: $text-primary;
+            white-space: nowrap;
+
+            @media (max-width: 1300px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: $mobile-l) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+a.c-contacts {
+    transition: $tr;
+
+    &:active {
+        transform: scale(.95);
+    }
+    
+    @media (any-hover: hover) {
+        
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 8px rgba(0,0,0,.2);
+        }
+
+        &:active {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    }
+}
+
+.c-contacts__icon {
+
+}
+
+.c-contacts__text {
+    font-weight: 400;
+    color: $text-second;
+    margin-left: 15px;
+    transition: $tr;
+
+    & span {
+        color: $text-primary;
+    }
+
+    & strong,
+    & b {
+        font-weight: 700;
+    }
+}
