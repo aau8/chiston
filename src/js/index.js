@@ -1,7 +1,16 @@
-import { find, findAll, removeAllClasses, bodyLock } from "./utils/functions.js";
+import { find, findAll, removeAllClasses, bodyLockToggle } from "./utils/functions.js";
 import "./render.js";
 // import "./menu.js";
-import "./modals.js";
+// import "./modals.js";
+
+const menu = document.querySelector('.menu'),
+      burger = document.querySelector('.burger')
+
+burger.addEventListener('click', e => {
+    menu.classList.toggle('_show')
+    burger.classList.toggle('_active')
+    bodyLockToggle()
+})
 
 // Стрелка "Наверх"
 // document.querySelector(".back-to-top").addEventListener("click", (e) => {

@@ -1,0 +1,109 @@
+.sale__body {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+
+.sale__content {
+    min-width: 535px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    background: linear-gradient(99.07deg, #161A1F 27.4%, rgba(22, 26, 31, 0) 53.69%);
+    padding: 35px;
+    padding-right: 0;
+
+    @media (max-width: $laptop) {
+        min-width: 470px;
+    }
+
+    @media (max-width: 830px) {
+        min-width: 380px;
+    }
+
+    @media (max-width: 700px) {
+        min-width: auto;
+        width: 100%;
+    }
+
+    @media (max-width: $mobile-l) {
+        width: 100vw;
+        padding: 25px 30px;
+        margin: 0 -16px;
+    }
+}
+
+.sale__title {
+    font-size: 43px;
+    line-height: 1;
+
+    @media (max-width: $laptop) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 830px) {
+        font-size: 26px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 23px;
+    }
+}
+
+.sale__text {
+    max-width: 400px;
+    font-weight: 400;
+    color: $text-second;
+    margin-top: 15px;
+
+    @media (max-width: $mobile-l) {
+        // font-size: 15px;
+    }
+}
+
+.sale__btn {
+    margin-top: 28px;
+
+    @media (max-width: $mobile-l) {
+        width: 100%;
+    }
+}
+
+// Изображения
+.sale__img {
+    position: relative;
+    max-width: 780px;
+    width: 70%;
+    margin-right: -60px;
+
+    @media (max-width: 700px) {
+        margin: 12px -10px 0 0;
+    }
+
+    @media (max-width: 550px) {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.sale__img-car {
+    position: relative;
+    z-index: 1;
+}
+
+.sale__img-bubbles {
+    position: absolute;
+    top: -32%;
+    left: 4%;
+    width: 37%;
+    height: 76%;
+
+    @media (max-width: 700px) {
+        top: -17%;
+        left: -6%;
+        transform: rotate(-26deg);        
+    }
+}

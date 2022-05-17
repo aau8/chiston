@@ -3,16 +3,25 @@
 // Миксины
 @import "./mixins";
 
+// Шрифты
+@include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
+@include font('Gilroy', normal, 500, '../resources/fonts/Gilroy/Gilroy-Medium.woff2');
+@include font('Gilroy', normal, 700, '../resources/fonts/Gilroy/Gilroy-Bold.woff2'); 
+
+@include font('GothamPro', normal, 700, '../resources/fonts/GothamPro/GothamPro-Medium.woff2');
+
 // Переменные
 // ================ Colors Start ================
 // Текст
-$text-primary: #333;
-$text-second: brig-color($text-primary, .7);
-$text-accent: #FFCD6D;
-$link-active: brig-color(#FFCD6D, active);
+$text-primary: #fff;
+$text-second: create-rgba($text-primary, .84);
+$accent: #559F11;
+$accent-active: brig-color($accent, active);
 
 // Задний фон разделов
-// $frame-dark: #080A0A;
+$frame-color: #1C2025;
+$frame-dark: #161A1F;
+$frame-light: #22272D;
 // $frame-light: #0E1010;
 
 // Обводка
@@ -31,9 +40,10 @@ $tf-label: $text-second;
 // ================ Responsive Start ================
 $min-width: 320px;
 $max-width: 1920px;
-$max-width-container: 1200;
-$container-padding: 24;
+$max-width-container: 1280;
+$container-padding: 48;
 $container-width: $max-width-container + $container-padding;
+$hide-menu: 1100px;
 
 $laptop-l: 1440px;
 $laptop: 1024px;
@@ -45,7 +55,7 @@ $mobile-s: 320px;
 
 
 // ================ Other Start ================
-$ff-main: sans-serif;
+$ff-main: 'Gilroy', sans-serif; 
 $tr: .3s;
 // ================ Other End ================
 //========================================================================================================================================================
@@ -79,8 +89,8 @@ body {
         position: relative;
         z-index: 1;
     }
-}
 
+}
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -97,6 +107,10 @@ body {
 		}
 		@if ($container-padding>0) {
 			padding: 0 rem(math.div($container-padding, 2));
+
+            @media (max-width: $mobile-l) {
+                padding: 0 rem(16);
+            }
 		}
 	}
 } 
@@ -144,6 +158,7 @@ body {
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
+@import "./sections/sale";
 @import "./sections/footer";
 
 

@@ -6,14 +6,14 @@ export default function sprite() {
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
-					sprite: '../img/icons/icons.svg',
-					// example: true
+					sprite: '../img/sprite.svg',
+					example: true
 				}
 			},
 			shape: {
 				id: {
 					separator: '',
-					generator: 'svg-'
+					generator: ''
 				},
 				transform: [
 					{
