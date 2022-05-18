@@ -1,0 +1,60 @@
+.form {
+    display: flex;
+    margin: 0 -12px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        margin: -6px 0;
+    }
+}
+
+.form__block {
+    width: 50%;
+    margin: 0 12px;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+
+    @media (max-width: $mobile-l) {
+        margin: 0 -8px;
+    }
+
+    & > .tf {
+        flex: 1 1 0;
+        margin: 12px;
+
+        @media (max-width: $mobile-l) {
+            margin: 8px;
+        }
+    }
+}
+
+.form__textarea {
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    // margin: 0 -12px;
+
+    @media (max-width: 800px) {
+        height: 200px;
+    }
+
+    & .tf {
+        height: 90%;
+        margin: 12px 0;
+
+        @media (max-width: $mobile-l) {
+            height: 100%;
+            // margin: 0 0 12px 0;
+        }
+    }
+}

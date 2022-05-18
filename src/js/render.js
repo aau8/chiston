@@ -1,26 +1,26 @@
 import { removeAllClasses, isWebp } from "./utils/functions.js"
 
 // Плейсхолдер текстовых полей
-// labelTextfield()
+labelTextfield()
 function labelTextfield() {
     const textfieldElems = document.querySelectorAll('.tf')
 
     for (let i = 0; i < textfieldElems.length; i++) {
         const textfield = textfieldElems[i];
         const input = textfield.querySelector('input, textarea')
-        const label = textfield.querySelector('label')
+        const label = textfield.querySelector('span')
 
         if (input.value != '') {
-            label.classList.add('_change-label')
+            textfield.classList.add('_change-label')
         }
 
         input.addEventListener('focus', e => {
-            label.classList.add('_change-label')
+            textfield.classList.add('_change-label')
         })
         
         input.addEventListener('blur', e => {
             if (input.value === '') {
-                label.classList.remove('_change-label')
+                textfield.classList.remove('_change-label')
             }
         })
     }

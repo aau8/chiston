@@ -2,6 +2,7 @@ import { find, findAll, removeAllClasses, bodyLockToggle } from "./utils/functio
 import "./render.js";
 import "./sliders.js";
 import "./modals.js";
+import "./form.js";
 // import "./menu.js";
 
 const menu = document.querySelector('.menu'),
@@ -12,6 +13,7 @@ burger.addEventListener('click', e => {
     burger.classList.toggle('_active')
     bodyLockToggle()
 })
+
 
 
 // Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom

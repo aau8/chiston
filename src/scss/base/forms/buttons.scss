@@ -50,6 +50,17 @@
             }
         }
     }
+
+    &:disabled {
+        color: #BFBFBF;
+        background: #DFDFDF;
+        pointer-events: none;
+        cursor: not-allowed;
+
+        &::after {
+            opacity: 0;
+        }
+    }
 }
 
 .link {

@@ -55,7 +55,7 @@
     position: relative;
     max-width: 845px;
     width: 100%;
-    background: $frame-dark;
+    background: $frame-primary;
     border-radius: $radius;
     padding: 35px;
 
@@ -71,6 +71,10 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 24px;
+    }
 }
 
 .modal__title {
@@ -112,4 +116,8 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+
+    @media (max-width: $mobile-l) {
+        flex-direction: column;
+    }
 }

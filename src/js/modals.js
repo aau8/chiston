@@ -75,9 +75,7 @@ function modal() {
             const target = e.target
 
             if (target.classList.contains('[data-modal-close]') || target.closest('[data-modal-close]')) {
-                const modal = target.closest('.modal')
-
-                closeModal(modal)
+                closeModal(target.closest('.modal'))
                 clearHash()
             }
         })
