@@ -2066,6 +2066,11 @@ a.c-contacts:active {
   overflow: hidden;
 }
 
+.contacts__map .ymaps-2-1-79-copyright__logo {
+  visibility: hidden !important;
+  display: none !important;
+}
+
 .footer {
   background: #161A1F;
   padding-top: 30px;
