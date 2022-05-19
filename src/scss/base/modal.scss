@@ -12,11 +12,13 @@
     visibility: hidden;
     opacity: 0;
     transition: $tr;
+    pointer-events: none;
 
     &._show {
         visibility: visible;
         opacity: 1;
         overflow-y: auto;
+        pointer-events: all;
 
         & .modal__wrap {
             // transform: translate(0, 0);

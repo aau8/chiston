@@ -17,7 +17,7 @@
                     <div class="main__content">
                         <h1 class="main__title">CHISTON AUTO</h1>
                         <p class="main__text">Главными ценностямии для нас служат бескомпромиссное качество выполняемых работ и исключительный подход к каждому автомобилю и его владельцу.</p>
-                        <button class="btn main__btn">Оставить заявку</button>
+                        <button class="btn main__btn" data-modal-open="callback">Оставить заявку</button>
                     </div>
                 </div>
                 <div class="main__footer">
@@ -60,7 +60,7 @@
                         <div class="sale__content">
                             <h3 class="sale__title text-with-accent">Скидка <span>10%</span> на первое <br>посещение центра</h3>
                             <p class="sale__text text-with-accent">Получите скидку 10% на любую мойку или монтаж шин на ваше первое посещение. <br>Для получения скидки сообщите администратору промокод «<span>ХХХХХХХ</span>»</p>
-                            <button class="btn sale__btn">Получить скидку</button>
+                            <button class="btn sale__btn" data-modal-open="get-sale">Получить скидку</button>
                         </div>
                         <div class="sale__img">
                             <img src="@img/sales/sale-car.png" alt="" class="sale__img-car">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="s-body services__body">
                         <div class="services__filter">
-                            <div class="select services__select">
+                            <div class="select services__select services__select-service">
                                 <button class="select-input">
                                     <span class="select-input__title">Выберите услугу</span>
                                     <input type="hidden" name="select">
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="select services__select">
+                            <div class="select services__select services__select-car-body">
                                 <button class="select-input">
                                     <span class="select-input__title">Выберите кузов</span>
                                     <input type="hidden" name="select">
@@ -116,7 +116,7 @@
                                 <div class="swiper-slide services__slide">
                                     <div class="c-service c-service_quest">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="c-service c-service_quest">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -142,7 +142,7 @@
                                 <div class="swiper-slide services__slide">
                                     <div class="c-service c-service_quest">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -154,7 +154,7 @@
                                     </div>
                                     <div class="c-service c-service_quest">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -168,7 +168,7 @@
                                 <div class="swiper-slide services__slide">
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -176,25 +176,7 @@
                                     </div>
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
-                                        <div class="s-service__info">
-                                            <span class="s-service__price">= 1 499 ₽</span>
-                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide services__slide">
-                                    <div class="c-service">
-                                        <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
-                                        <div class="s-service__info">
-                                            <span class="s-service__price">= 1 499 ₽</span>
-                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="c-service">
-                                        <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -204,7 +186,7 @@
                                 <div class="swiper-slide services__slide">
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -212,25 +194,7 @@
                                     </div>
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
-                                        <div class="s-service__info">
-                                            <span class="s-service__price">= 1 499 ₽</span>
-                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide services__slide">
-                                    <div class="c-service">
-                                        <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
-                                        <div class="s-service__info">
-                                            <span class="s-service__price">= 1 499 ₽</span>
-                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="c-service">
-                                        <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -240,7 +204,7 @@
                                 <div class="swiper-slide services__slide">
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -248,7 +212,79 @@
                                     </div>
                                     <div class="c-service">
                                         <h3 class="c-service__title">R13</h3>
-                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка R13</p>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide services__slide">
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
+                                        <div class="s-service__info">
+                                            <span class="s-service__price">= 1 499 ₽</span>
+                                            <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="c-service">
+                                        <h3 class="c-service__title">R13</h3>
+                                        <p class="s-service__text text-with-accent">Съем, установка, <br>монтаж, демонтаж, <br>балансировка <span>R13</span></p>
                                         <div class="s-service__info">
                                             <span class="s-service__price">= 1 499 ₽</span>
                                             <button class="icon icon_l s-service__quest-icon"><svg><use href='./img/sprite.svg#question'></use></svg></button>
@@ -301,28 +337,28 @@
                             <div class="slider portfolio__slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide portfolio__slide">
-                                        <img src="@img/portfolio/1.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/1.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide portfolio__slide_double">
-                                        <img src="@img/portfolio/2.png" alt="" data-zoom>
-                                        <img src="@img/portfolio/3.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/2.png" alt="" data-zoom></div>
+                                        <div class="portfolio__img"><img src="@img/portfolio/3.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide">
-                                        <img src="@img/portfolio/4.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/4.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide portfolio__slide_double">
-                                        <img src="@img/portfolio/5.png" alt="" data-zoom>
-                                        <img src="@img/portfolio/6.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/5.png" alt="" data-zoom></div>
+                                        <div class="portfolio__img"><img src="@img/portfolio/6.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide">
-                                        <img src="@img/portfolio/7.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/7.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide portfolio__slide_double">
-                                        <img src="@img/portfolio/8.png" alt="" data-zoom>
-                                        <img src="@img/portfolio/9.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/8.png" alt="" data-zoom></div>
+                                        <div class="portfolio__img"><img src="@img/portfolio/9.png" alt="" data-zoom></div>
                                     </div>
                                     <div class="swiper-slide portfolio__slide">
-                                        <img src="@img/portfolio/10.png" alt="" data-zoom>
+                                        <div class="portfolio__img"><img src="@img/portfolio/10.png" alt="" data-zoom></div>
                                     </div>
                                 </div>
                             </div>
@@ -452,6 +488,10 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="reviews__bg">
+                            <img class="reviews__bg-small" src="@img/reviews/bg/reviews-bg.svg" alt="">
+                            <img class="reviews__bg-big" src="@img/reviews/bg/reviews-bg.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -502,13 +542,13 @@
                                 <div class="faq-write__content">
                                     <h3 class="faq-write__title">Остались вопросы?</h3>
                                     <p class="faq-write__text">Тогда просто напишите нам и мы ответим на все интересущие Вас вопросы.</p>
-                                    <button class="btn faq-write__btn">Написать</button>
+                                    <button class="btn faq-write__btn" data-modal-open="ask">Написать</button>
                                 </div>
                                 <div class="faq-write__img"><img src="@img/faq/faq-monument.png" alt=""></div>
                             </div>
                         </div>
                         <div class="faq-block faq-preview">
-                            <div class="faq-preview__img"><img src="" alt=""></div>
+                            <div class="faq-preview__img"><img src="#" alt=""></div>
                             <div class="faq-preview__content"></div>
                         </div>
                     </div>

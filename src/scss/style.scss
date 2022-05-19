@@ -14,7 +14,7 @@
 // ================ Colors Start ================
 // Текст
 $text-primary: #fff;
-$text-second: create-rgba($text-primary, .84);
+$text-second: create-rgba($text-primary, .7);
 $accent: #559F11;
 $accent-active: brig-color($accent, active);
 
@@ -164,7 +164,8 @@ body {
 @import "./sections/services";
 @import "./sections/brands";
 @import "./sections/portfolio";
-@import "./sections/faq"; 
+@import "./sections/reviews";
+@import "./sections/faq";
 @import "./sections/contacts";
 @import "./sections/footer";
 

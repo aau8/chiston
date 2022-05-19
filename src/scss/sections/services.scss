@@ -15,6 +15,22 @@
     @media (max-width: 550px) {
         width: 100%;
     }
+
+    &-service {
+        min-width: 283px;
+
+        @media (max-width: $tablet) {
+            min-width: 222px;
+        }
+    }
+
+    &-car-body {
+        min-width: 232px;
+
+        @media (max-width: $tablet) {
+            min-width: 181px;
+        }
+    }
 }
 
 .services__slider {

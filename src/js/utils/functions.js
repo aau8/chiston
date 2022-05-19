@@ -17,7 +17,12 @@ export function removeAllClasses(items, itemClass) {
     }
 
     for (let i = 0; i < items.length; i++) {
-        items[i].classList.remove(itemClass)
+        if (typeof(itemClass) === 'object') {
+            items[i].classList.remove(...itemClass)
+        }
+        else {
+            items[i].classList.remove(itemClass)
+        }
     }
 }
 //========================================================================================================================================================

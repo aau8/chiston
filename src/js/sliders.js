@@ -1,3 +1,4 @@
+import { removeAllClasses, removeClass } from "./utils/functions.js";
 import Swiper, { Grid, Pagination } from "swiper";
 // import 'swiper/css'
 
@@ -99,12 +100,16 @@ const servicesSlider = new Swiper('.services__slider', {
 
     pagination: {
         el: '.services__slider-pagination',
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
+        // dynamicBullets: true,
+        // dynamicMainBullets: 3,
         clickable: true,
+        
     },
-});
 
+    on: {
+        paginationUpdate: renderPagination
+    }
+});
 
 const portfolioSlider = new Swiper('.portfolio__slider', {
     modules: [ Grid, Pagination ],
@@ -142,10 +147,12 @@ const portfolioSlider = new Swiper('.portfolio__slider', {
 
     pagination: {
         el: '.portfolio__slider-pagination',
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
         clickable: true,
     },
+
+    on: {
+        paginationUpdate: renderPagination
+    }
 });
 
 
@@ -185,8 +192,34 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 
     pagination: {
         el: '.reviews__slider-pagination',
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
         clickable: true,
     },
+
+    on: {
+        paginationUpdate: renderPagination
+    }
 });
+
+// Добавление активных классов точкам пагинации
+function renderPagination(swiper, pagination) {
+    const bulletElems = pagination.querySelectorAll('.swiper-pagination-bullet')
+    const bulletActive = pagination.querySelector('.swiper-pagination-bullet-active')
+
+    removeAllClasses(bulletElems, ['swiper-pagination-bullet-prev', 'swiper-pagination-bullet-prev-prev', 'swiper-pagination-bullet-next', 'swiper-pagination-bullet-next-next'])
+
+    if (bulletActive.previousElementSibling) {
+        bulletActive.previousElementSibling.classList.add('swiper-pagination-bullet-prev')
+        
+        if (bulletActive.previousElementSibling.previousElementSibling) {
+            bulletActive.previousElementSibling.previousElementSibling.classList.add('swiper-pagination-bullet-prev-prev')
+        }
+    }
+
+    if (bulletActive.nextElementSibling) {
+        bulletActive.nextElementSibling.classList.add('swiper-pagination-bullet-next')
+
+        if (bulletActive.nextElementSibling.nextElementSibling) {
+            bulletActive.nextElementSibling.nextElementSibling.classList.add('swiper-pagination-bullet-next-next')
+        }
+    }
+}

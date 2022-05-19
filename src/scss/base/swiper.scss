@@ -54,10 +54,16 @@
 }
 
 .pagination {
-    width: auto !important;
+    // width: auto !important;
     display: flex;
     align-items: center;
-    margin-left: -18px;
+    // margin-left: -18px;
+}
+
+@mixin showBullet() {
+    transform: scale(1);
+    width: 10px;
+    margin-right: 10px;
 }
 
 .swiper-pagination-bullet {
@@ -69,61 +75,92 @@
     // opacity: 0;
     transition: $tr;
     cursor: pointer;
+    width: 0;
+    transform: scale(0);
+    margin-right: 0;
 
     &:not(:last-child) {
-        margin-right: 10px;
+        // margin-right: 10px;
     }
 
-    &:last-child.swiper-pagination-bullet-active-main {
-        margin-right: -18px;
+    &:last-child {
+        margin-right: 0;
     }
+
+    // &:last-child.swiper-pagination-bullet-active-main {
+    //     margin-right: -18px;
+    // }
 
     &-active {
         background: $accent;
+        @include showBullet;
     }
 
-    &-active-next {
-
+    &-prev {
+        @include showBullet;
     }
 
-    &-active-next-next {
+    &-next {
+        @include showBullet;
+    }
 
+    &-next-next {
+        width: 10px;
+        transform: scale(.5);
+        margin-right: 10px;
+    }
+
+    &._hide {
+        // transform: scale(0);
+        // width: 0;
+        // margin-right: 0;
+    }
+
+    &._show {
+        transform: scale(1);
+        width: 10px;
+        margin-right: 10px;
+    }
+
+    &._small {
+        transform: scale(.5);
+        width: 10px;
     }
 }
 
 
-.swiper-pagination-bullets-dynamic {
-	overflow: hidden;
-	font-size: 0;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	transform: scale(0.33);
-	position: relative;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-	transform: scale(1);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-	transform: scale(1);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-	transform: scale(0.5) translateX(-50px);
-    // position: absolute;
-    // left: -100px;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-	transform: scale(0.5) translateX(-50px);
-    visibility: hidden;
-    // position: absolute;
-    // left: -100px;
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-	transform: scale(0.5);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-	transform: scale(0);
-    visibility: hidden;
-}
+// .swiper-pagination-bullets-dynamic {
+// 	overflow: hidden;
+// 	font-size: 0;
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+// 	transform: scale(0.33);
+// 	position: relative;
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+// 	transform: scale(1);
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+// 	transform: scale(1);
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+// 	transform: scale(0.5) translateX(-50px);
+//     // position: absolute;
+//     // left: -100px;
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+// 	transform: scale(0.5) translateX(-50px);
+//     visibility: hidden;
+//     // position: absolute;
+//     // left: -100px;
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+// 	transform: scale(0.5);
+// }
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+// 	transform: scale(0);
+//     visibility: hidden;
+// }
 
 // Скрываемые слайды
 

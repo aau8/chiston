@@ -76,20 +76,20 @@
             <div class="form callback__body">
                 <div class="form__block callback-block">
                     <div class="form__row">
-                        <label class="tf" data-required>
-                            <input type="text">
+                        <label class="tf" data-required data-only-letters>
+                            <input type="text" name="name">
                             <span class="tf__label">Ваше имя:</span>
                         </label>
                     </div>
                     <div class="form__row">
-                        <label class="tf" data-required>
-                            <input type="text">
+                        <label class="tf" data-required data-only-digits>
+                            <input type="text" name="phone">
                             <span class="tf__label">Ваш номер телефона:</span>
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="tf">
-                            <input type="text">
+                            <input type="text" name="email">
                             <span class="tf__label">Ваш mail адрес:</span>
                         </label>
                     </div>
@@ -97,15 +97,15 @@
                 <div class="form__block callback-block">
                     <div class="form__textarea">
                         <label class="tf" data-required>
-                            <textarea></textarea>
+                            <textarea name="message" maxlength="180"></textarea>
                             <span class="tf__label">Что интересует Вас <br>из наших услуг?</span>
-                            <span class="tf__symbols">не более <span>180</span> символов</span>
+                            <span class="tf__symbols">не более <span></span> символов</span>
                         </label>
                     </div>
                 </div>
             </div>
             <div class="modal__footer">
-                <button class="btn callback__btn" disabled>Отправить</button>
+                <button type="submit" class="btn callback__btn" disabled>Отправить</button>
             </div>
         </form>
         <div class="modal__bg"></div>
@@ -113,7 +113,7 @@
 </div>
 
 <!-- Заявка на обратный звонок -->
-<div class="modal callback" data-modal-id="ask-question" data-close-on-bg>
+<div class="modal callback" data-modal-id="ask" data-close-on-bg>
     <div class="modal__wrap callback__wrap">
         <form action="#" class="modal__window callback__window">
             <div class="modal__header">
@@ -124,7 +124,7 @@
                 <div class="form__block callback-block">
                     <div class="form__textarea">
                         <label class="tf" data-required>
-                            <textarea></textarea>
+                            <textarea name="question" maxlength="180"></textarea>
                             <span class="tf__label">Напишите, что Вас интересует, <br>и мы с радостью ответим Вам</span>
                             <span class="tf__symbols">не более <span>180</span> символов</span>
                         </label>
@@ -132,31 +132,31 @@
                 </div>
                 <div class="form__block callback-block">
                     <div class="form__row">
-                        <label class="tf" data-required>
-                            <input type="text">
+                        <label class="tf" data-required data-only-letters>
+                            <input type="text" name="name">
                             <span class="tf__label">Ваше имя:</span>
                         </label>
                     </div>
                     <div class="form__row">
-                        <label class="tf" data-required>
-                            <input type="text">
+                        <label class="tf" data-required data-only-digits>
+                            <input type="text" name="phone">
                             <span class="tf__label">Ваш номер телефона:</span>
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="tf">
-                            <input type="text">
+                            <input type="text" name="whatsapp">
                             <span class="tf__label">Whatsapp</span>
                         </label>
                         <label class="tf">
-                            <input type="text">
+                            <input type="text" name="telegram">
                             <span class="tf__label">Telegram</span>
                         </label>
                     </div>
                 </div>
             </div>
             <div class="modal__footer">
-                <button class="btn callback__btn" disabled>Отправить</button>
+                <button type="submit" class="btn callback__btn" disabled>Отправить</button>
             </div>
         </form>
         <div class="modal__bg"></div>

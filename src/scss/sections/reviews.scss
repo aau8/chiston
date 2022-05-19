@@ -1,0 +1,36 @@
+.reviews {
+    position: relative;
+}
+
+.reviews__bg-small,
+.reviews__bg-big {
+    position: absolute;
+    z-index: -1;
+    height: auto;
+}
+
+.reviews__bg-small {
+    top: -36px;
+    left: 50%;
+    transform: translate(110%, 0);
+    width: 103px;
+
+    @media (max-width: $mobile-l) {
+        top: -50px;
+        width: 64px;
+        transform: translate(30%, 0);
+    }
+}
+
+.reviews__bg-big {
+    top: -36px;
+    left: 50%;
+    transform: translate(100%, 0);
+    width: 218px;
+
+    @media (max-width: $mobile-l) {
+        top: 0;
+        width: 135px;
+        transform: translate(30%, 0);
+    }
+}
