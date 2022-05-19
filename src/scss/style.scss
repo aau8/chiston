@@ -115,36 +115,7 @@ body {
             }
 		}
 	}
-} 
-// @else {
-// 	// По брейк-поинтам
-// 	[class*="__container"] {
-// 		margin: 0 auto;
-// 		@if ($max-width-container>0) {
-// 			max-width: rem($max-width-container);
-// 			box-sizing: content-box;
-// 		} @else {
-// 			@if ($container-padding>0) {
-// 				padding: 0 rem(math.div($container-padding, 2));
-// 			}
-// 		}
-// 		@media (max-width: $container-width + px) {
-// 			max-width: rem(970);
-// 		}
-// 		@media (max-width: $tablet) {
-// 			max-width: rem(750);
-// 		}
-// 		@media (max-width: $mobile-l) {
-// 			max-width: none;
-// 			@if ($container-padding>0 and $max-width-container>0) {
-// 				padding: 0 rem(math.div($container-padding, 2));
-// 			}
-// 		}
-// 	}
-// }
-
-// Библиотеки
-// @import "./libs/swiper";
+}
 
 // Общие стили проекта
 @import "./common";

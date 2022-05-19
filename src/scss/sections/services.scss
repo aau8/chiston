@@ -1,5 +1,3 @@
-
-
 // Фильтр
 .services__filter {
     display: flex;
@@ -57,34 +55,4 @@
             margin-bottom: 25px;
         }
     }
-
-    // @media (min-width: 990px) {
-    //     opacity: .15;
-        
-    //     &.swiper-slide-active,
-    //     &.swiper-slide-active + *,
-    //     &.swiper-slide-active + * + *,
-    //     &.swiper-slide-active + * + * + * {
-    //         opacity: 1;
-    //     }
-    // }
-}
-
-.services__footer {
-
-    // @media (max-width: $mobile-l) {
-    //     flex-direction: column;
-    //     align-items: center;
-
-    //     & > * {
-
-    //         &:not(:last-child) {
-    //             margin-bottom: 16px;
-    //         }
-    //     }
-    // }
-}
-
-.services__dl-doc {
-    // max-width: 200px;
 }

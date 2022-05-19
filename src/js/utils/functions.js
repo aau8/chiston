@@ -37,20 +37,6 @@ export function removeClass(item, itemClass) {
 }
 //========================================================================================================================================================
 
-// Заблокировать/разблокировать скролл у body
-// export function bodyLock(con) {
-//     if (con === true) {
-//         document.body.classList.add("_lock")
-//     } else if (con === false) {
-//         document.body.classList.remove("_lock")
-//     } else if (con === undefined) {
-//         document.body.classList.toggle("_lock")
-//     } else {
-//         console.error("Неопределенный аргумент у функции bodyLock()")
-//     }
-// }
-//========================================================================================================================================================
-
 // Получаем все соседние элементы
 export function getSiblings(elem) {
     var siblings = []
