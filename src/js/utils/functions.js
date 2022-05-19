@@ -210,3 +210,32 @@ export let bodyLock = (delay = 100) => {
 		}, delay);
 	}
 }
+
+// Ленивая загрузка изображений
+lazyLoading();
+function lazyLoading() {
+    const lazyElems = document.querySelectorAll("[data-lazy-loading]")
+    const windowHeight = document.documentElement.clientHeight
+
+    lazyShow()
+    window.addEventListener("scroll", function () {
+        lazyShow()
+    })
+
+    function lazyShow() {
+        for (let i = 0; i < lazyElems.length; i++) {
+            const lazyElem = lazyElems[i];
+
+            if (lazyElem.tagName === 'SCRIPT' && (lazyElem.getAttribute('src') == '' || lazyElem.getAttribute('src') == null)) {
+                if (lazyElem.parentElement.getBoundingClientRect().top - windowHeight < 400) {
+                    lazyElem.setAttribute("src", lazyElem.dataset.lazyLoading)
+                    lazyElem.removeAttribute('data-lazy-loading')
+                }
+            }
+            else if (lazyElem.getBoundingClientRect().top - windowHeight < 400 && (lazyElem.getAttribute('src') == '' || lazyElem.getAttribute('src') == null)) {
+                lazyElem.setAttribute("src", lazyElem.dataset.lazyLoading)
+                lazyElem.removeAttribute('data-lazy-loading')
+            }
+        }
+    }
+}
