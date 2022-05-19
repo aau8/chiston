@@ -70,6 +70,10 @@ $responsive-type: 1;
 // Сброс CSS
 @import "./base/reset";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 
     ._lock & {

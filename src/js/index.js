@@ -14,7 +14,19 @@ burger.addEventListener('click', e => {
     bodyLockToggle()
 })
 
+if (window.innerWidth <= 1100) {
+    const navItemElems = menu.querySelectorAll('.nav__list li a')
 
+    for (let i = 0; i < navItemElems.length; i++) {
+        const navItem = navItemElems[i];
+        
+        navItem.addEventListener('click', e => {
+            menu.classList.remove('_show')
+            burger.classList.remove('_active')
+            bodyLockToggle()
+        })
+    }
+}
 
 // Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
 zoomInImg()

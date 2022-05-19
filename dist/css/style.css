@@ -136,6 +136,10 @@ h6 {
   font-weight: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ._lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -180,11 +184,14 @@ h6 {
 }
 
 .logo {
+  width: 89px;
   height: 75px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   display: block;
+}
+
+.logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .copyright {
@@ -590,7 +597,7 @@ h6 {
   -webkit-transform: translate(0, 100%);
       -ms-transform: translate(0, 100%);
           transform: translate(0, 100%);
-  background: #161A1F;
+  background: #22272D;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -604,7 +611,7 @@ h6 {
 }
 
 .select-dropdown__list {
-  max-height: 230px;
+  max-height: 300px;
   padding: 12px 0;
   overflow-y: auto;
 }
@@ -631,39 +638,21 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: inherit;
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 18px;
+  padding: 12px 16px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
-.select-dropdown__item._selected::before {
-  opacity: 1;
-  visibility: visible;
-}
-
-.select-dropdown__item::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00002 16.2001L4.80002 12.0001L3.40002 13.4001L9.00002 19.0001L21 7.0001L19.6 5.6001L9.00002 16.2001Z' fill='%23559F11'/%3E%3C/svg%3E") no-repeat;
-  background-size: contain;
-  background-position: center center;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+.select-dropdown__item._selected {
+  font-weight: 700;
+  color: #559F11;
 }
 
 .select-dropdown__item:active {
@@ -1104,6 +1093,14 @@ h6 {
 }
 
 .swiper-pagination-bullet-next-next {
+  width: 10px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  margin-right: 10px;
+}
+
+.swiper-pagination-bullet-next-next-next {
   width: 10px;
   -webkit-transform: scale(0.5);
       -ms-transform: scale(0.5);
@@ -2280,7 +2277,7 @@ a.c-contacts:active {
   }
 
   .logo {
-    height: 60px;
+    width: 70px;
   }
 
   .header {
@@ -2364,7 +2361,7 @@ a.c-contacts:active {
   }
 
   .nav {
-    margin: 15px 0 auto;
+    margin: 15px 0 0;
   }
 
   .nav__list {
@@ -2533,8 +2530,9 @@ a.c-contacts:active {
   }
 
   .select-input__title {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0 24px;
+    margin: 0 auto;
   }
 
   .select-input__chevron {
@@ -2582,12 +2580,16 @@ a.c-contacts:active {
   }
 
   .brands__body {
-    margin: -10px -30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 60px;
+    margin: 0;
   }
 
   .brands__logo {
-    max-width: 140px;
-    margin: 10px 30px;
+    margin: 0;
   }
 
   .faq__body {
@@ -2726,6 +2728,26 @@ a.c-contacts:active {
   }
 }
 
+@media (max-width: 480px) {
+  .brands__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+    margin: -12px -10px;
+  }
+
+  .brands__logo {
+    width: 43%;
+    margin: 12px 10px;
+  }
+}
+
 @media (max-width: 425px) {
   body {
     font-size: 15px;
@@ -2767,10 +2789,6 @@ a.c-contacts:active {
 
   .no-webp .btn::after{
     background-image: url("../img/btn-border-large.png"); }
-
-  .select-input__title {
-    font-size: 16px;
-  }
 
   .tf input,
   .tf textarea {
@@ -2884,11 +2902,6 @@ a.c-contacts:active {
     margin-bottom: 25px;
   }
 
-  .brands__logo {
-    max-width: 120px;
-    margin: 10px 20px;
-  }
-
   .portfolio__slider-container::before {
     padding-top: 100%;
   }
@@ -2972,11 +2985,6 @@ a.c-contacts:active {
 @media (max-width: 375px) {
   .copyright {
     font-size: 12px;
-  }
-
-  .brands__logo {
-    max-width: 100px;
-    margin: 10px 20px;
   }
 }
 

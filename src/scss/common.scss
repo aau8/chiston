@@ -2,12 +2,16 @@
 
 // Логотип
 .logo {
+    width: 89px;
     height: 75px;
-    width: fit-content;
     display: block;
 
     @media (max-width: $container-width + px) {
-        height: 60px;
+        width: 70px;
+    }
+
+    & img {
+        object-fit: contain;
     }
 }
 

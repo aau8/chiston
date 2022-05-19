@@ -1,39 +1,10 @@
 import Swiper, { Grid, Pagination } from "swiper";
-import { renderPagination } from "./sliders.js";
+import { renderPagination, breakpointsSlider } from "./sliders.js";
 
 const servicesSlider = new Swiper('.services__slider', {
     modules: [ Grid, Pagination ],
 
-    breakpoints: {
-        990: {
-            slidesPerView: 4,
-            spaceBetween: 25,
-        },
-        720: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-        },
-        680: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-        },
-        470: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-        425: {
-            slidesPerView: 1.8,
-            spaceBetween: 16,
-        },
-        350: {
-            slidesPerView: 1.4,
-            spaceBetween: 16,
-        },
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 16,
-        },
-    },
+    breakpoints: breakpointsSlider,
 
     pagination: {
         el: '.services__slider-pagination',
