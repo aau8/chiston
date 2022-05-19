@@ -81,6 +81,7 @@ export function getRandomInt(min, max) {
 
 
 // Проверка поддержки webp, добавление класса webp или no-webp тегу body
+isWebp()
 export function isWebp() {
     // Проверка поддержки webp
     function testWebP(callback) {
