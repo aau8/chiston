@@ -46,7 +46,12 @@
 }
 
 .s-service__text {
+    max-width: 220px;
     margin-top: 24px;
+
+    @media (max-width: 450px) {
+        max-width: 180px;
+    }
 }
 
 .s-service__info {

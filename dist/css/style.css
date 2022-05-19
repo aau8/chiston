@@ -1232,6 +1232,7 @@ html {
 }
 
 .s-service__text {
+  max-width: 220px;
   margin-top: 24px;
 }
 
@@ -2740,6 +2741,12 @@ a.c-contacts:active {
   }
 }
 
+@media (max-width: 450px) {
+  .s-service__text {
+    max-width: 180px;
+  }
+}
+
 @media (max-width: 425px) {
   body {
     font-size: 15px;
@@ -2877,7 +2884,7 @@ a.c-contacts:active {
   }
 
   .sale__content {
-    width: 100vw;
+    width: calc(100% + 32px);
     padding: 25px 30px;
     margin: 0 -16px;
   }

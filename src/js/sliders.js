@@ -8,6 +8,8 @@ export const breakpointsSlider = {
         spaceBetween: 25,
     },
     720: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 25,
     },
     680: {
@@ -15,21 +17,25 @@ export const breakpointsSlider = {
         slidesPerGroup: 3,
         spaceBetween: 16,
     },
-    470: {
+    520: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 16,
     },
-    425: {
+    470: {
         slidesPerView: 1.8,
         spaceBetween: 16,
     },
-    350: {
-        slidesPerView: 1.4,
+    450: {
+        slidesPerView: 1.5,
         spaceBetween: 16,
     },
-    320: {
-        slidesPerView: 1.2,
+    // 350: {
+    //     slidesPerView: 1.4,
+    //     spaceBetween: 16,
+    // },
+    0: {
+        slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 16,
     },

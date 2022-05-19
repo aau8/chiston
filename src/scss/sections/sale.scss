@@ -34,7 +34,7 @@
     }
 
     @media (max-width: $mobile-l) {
-        width: 100vw;
+        width: calc(100% + 32px);
         padding: 25px 30px;
         margin: 0 -16px;
     }
