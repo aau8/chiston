@@ -90,17 +90,17 @@
 
     &-next-next {
         width: 10px;
-        // transform: scale(.5);
-        transform: scale(1);
-        margin-right: 10px;
-    }
-
-    &-next-next-next {
-        width: 10px;
         transform: scale(.5);
         // transform: scale(1);
         margin-right: 10px;
     }
+
+    // &-next-next-next {
+    //     width: 10px;
+    //     transform: scale(.5);
+    //     // transform: scale(1);
+    //     margin-right: 10px;
+    // }
 
     &._show {
         transform: scale(1);
