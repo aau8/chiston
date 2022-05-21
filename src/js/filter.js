@@ -1,6 +1,7 @@
 import Swiper, { Grid, Pagination } from "swiper";
 import { renderPagination, breakpointsSlider } from "./sliders.js";
 
+let servicesSliderPaginBlockWidth
 const servicesSlider = new Swiper('.services__slider', {
     modules: [ Grid, Pagination ],
 
@@ -8,11 +9,14 @@ const servicesSlider = new Swiper('.services__slider', {
 
     pagination: {
         el: '.services__slider-pagination',
-        clickable: true,        
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 3,
     },
 
     on: {
         paginationUpdate: renderPagination
+        // paginationUpdate: renderPagination
     }
 });
 

@@ -104,16 +104,25 @@ export function acc() {
         }
     })
 
-    if (document.querySelector('.acc_show')) {
-        const accToggleElems = document.querySelectorAll('.acc_show .acc__toggle')
+    if (window.innerWidth > 768) {
+        const accFirst = document.querySelectorAll('.acc')[0]
 
-        for (let i = 0; i < accToggleElems.length; i++) {
-            const accToggle = accToggleElems[i];
+        accFirst.classList.add('acc_show')
+        doAcc(accFirst.querySelector('.acc__toggle'))
 
-            doAcc(accToggle)
-            accToggle.parentElement.classList.add("acc_show")
-        }
+        console.log(accFirst)
     }
+
+    // if (document.querySelector('.acc_show')) {
+    //     const accToggleElems = document.querySelectorAll('.acc_show .acc__toggle')
+
+    //     for (let i = 0; i < accToggleElems.length; i++) {
+    //         const accToggle = accToggleElems[i];
+
+    //         doAcc(accToggle)
+    //         accToggle.parentElement.classList.add("acc_show")
+    //     }
+    // }
 
     function doAcc(accToggle) {
         const accContainer = !accToggle.closest("[data-acc-body]") ? accToggle.parentElement.parentElement : accToggle.closest("[data-acc-body]")
