@@ -1,7 +1,6 @@
 import Swiper, { Grid, Pagination } from "swiper";
-import { renderPagination, breakpointsSlider } from "./sliders.js";
+import { renderPagination, breakpointsSlider, swiperAfterInit } from "./sliders.js";
 
-let servicesSliderPaginBlockWidth
 const servicesSlider = new Swiper('.services__slider', {
     modules: [ Grid, Pagination ],
 
@@ -15,10 +14,15 @@ const servicesSlider = new Swiper('.services__slider', {
     },
 
     on: {
-        paginationUpdate: renderPagination
-        // paginationUpdate: renderPagination
+        paginationUpdate: renderPagination,
+        afterInit: swiperAfterInit
     }
 });
+
+// document.addEventListener('load', e => {
+
+// })
+
 
 const filter = document.querySelector('.services__filter')
 const selectFilterElems = filter.querySelectorAll('.services__select')

@@ -12,11 +12,6 @@ export const breakpointsSlider = {
         slidesPerView: 3,
         spaceBetween: 25,
     },
-    // 720: {
-    //     slidesPerView: 3,
-    //     slidesPerGroup: 3,
-    //     spaceBetween: 25,
-    // },
     680: {
         slidesPerView: 2.6,
         slidesPerGroup: 3,
@@ -35,10 +30,6 @@ export const breakpointsSlider = {
         slidesPerView: 1.5,
         spaceBetween: 16,
     },
-    // 350: {
-    //     slidesPerView: 1.4,
-    //     spaceBetween: 16,
-    // },
     0: {
         slidesPerView: 1,
         slidesPerGroup: 1,
@@ -46,11 +37,50 @@ export const breakpointsSlider = {
     },
 }
 
-let portfolioSliderPaginBlockWidth
+// document.addEventListener('load') {
+
+// }
 const portfolioSlider = new Swiper('.portfolio__slider', {
     modules: [ Grid, Pagination ],
     
-    breakpoints: breakpointsSlider,
+    centeredSlides: false,
+
+    breakpoints: {
+        1050: {
+            slidesPerGroup: 4,
+            slidesPerView: 4,
+            spaceBetween: 25,
+        },
+        990: {
+            slidesPerGroup: 3,
+            slidesPerView: 3,
+            spaceBetween: 25,
+        },
+        680: {
+            slidesPerView: 2.6,
+            slidesPerGroup: 3,
+            spaceBetween: 16,
+        },
+        530: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 16,
+        },
+        470: {
+            slidesPerView: 1.8,
+            spaceBetween: 16,
+        },
+        450: {
+            slidesPerView: 1.5,
+            spaceBetween: 16,
+        },
+        0: {
+            slidesPerView: 1.1,
+            slidesPerGroup: 1,
+            spaceBetween: 16,
+            centeredSlides: true,
+        },
+    },
 
     pagination: {
         el: '.portfolio__slider-pagination',
@@ -60,7 +90,8 @@ const portfolioSlider = new Swiper('.portfolio__slider', {
     },
 
     on: {
-        paginationUpdate: renderPagination
+        paginationUpdate: renderPagination,
+        afterInit: swiperAfterInit,
     }
 });
 
@@ -78,9 +109,18 @@ const reviewsSlider = new Swiper('.reviews__slider', {
     },
 
     on: {
-        paginationUpdate: renderPagination
+        paginationUpdate: renderPagination,
+        afterInit: swiperAfterInit,
     }
 });
+
+export function swiperAfterInit(swiper) {
+    const paginBlock = swiper.$el[0].closest('.s-body').querySelector('.pagination-block')
+
+    setTimeout(e => {
+        paginBlock.dataset.width = paginBlock.clientWidth
+    }, 300)
+}
 
 // Добавление активных классов точкам пагинации
 export function renderPagination(swiper, pagination) {
@@ -88,51 +128,59 @@ export function renderPagination(swiper, pagination) {
     const bulletElems = pagination.querySelectorAll('.swiper-pagination-bullet')
     let bulletActiveIndex
 
-    console.log(paginBlock.dataset.width)
-    if (paginBlock.dataset.width == undefined) {
-        paginBlock.dataset.width = paginBlock.clientWidth
-    }
-
     Array.from(bulletElems).filter((e, i, a) => {
         if (e.classList.contains('swiper-pagination-bullet-active')) {
             bulletActiveIndex = i
         }
         return a
     })
-    // console.log(swiper)
-    // console.log(bulletActiveIndex)
+    
+    const checkDataWidth = setInterval(() => {
+        
+        if (paginBlock.dataset.width != undefined) {
+            clearInterval(checkDataWidth)
 
-    // bulletActiveIndex >= 3
+            if (bulletElems.length > 4) {
+                const paginBlockWidth = parseInt(paginBlock.dataset.width)
 
-    if (bulletElems.length >= 4) {
-        if (bulletActiveIndex >= 3) {
-            pagination.style.transform = 'translateX(0)'
-            paginBlock.style.width = 'auto'
-        }
-        if (bulletActiveIndex === bulletElems.length - 1) {
-            
-            if (bulletElems.length === 4) {
-                paginBlock.style.width = paginBlock.dataset.width - 3 + 'px'
+                if (bulletActiveIndex >= 3) {
+                    pagination.style.transform = 'translateX(0)'
+                    paginBlock.style.width = paginBlockWidth + 'px'
+                }
+                if (bulletActiveIndex === bulletElems.length - 1) {
+                    
+                    if (bulletElems.length === 4) {
+                        paginBlock.style.width = paginBlockWidth - 3 + 'px'
+                    }
+                    // else if (bulletElems.length === 5) {
+                        // paginBlock.style.width = paginBlockWidth - 30 + 'px'
+                    // }
+                    else {
+                        paginBlock.style.width = paginBlockWidth - 20 + 'px'
+                    }
+                }
+                if (bulletActiveIndex < 3) {
+                    
+                    if (bulletElems.length === 4) {
+                        pagination.style.transform = 'translateX(-10px)'
+                        paginBlock.style.width = paginBlockWidth - 3 + 'px'
+                    }
+                    // else if (bulletElems.length === 5) {
+                    //     pagination.style.transform = 'translateX(-5px)'
+                    //     paginBlock.style.width = paginBlockWidth - 30 + 'px'
+                    // }
+                    else {
+                        pagination.style.transform = 'translateX(-20px)'
+                        paginBlock.style.width = paginBlockWidth - 20 + 'px'
+                    }
+                }
             }
             else {
-                paginBlock.style.width = paginBlock.dataset.width - 20 + 'px'
+                pagination.style.width = 'auto'
             }
         }
-        if (bulletActiveIndex < 3) {
-            
-            if (bulletElems.length === 4) {
-                pagination.style.transform = 'translateX(-10px)'
-                paginBlock.style.width = parseInt(paginBlock.dataset.width) - 3 + 'px'
-            }
-            else {
-                pagination.style.transform = 'translateX(-20px)'
-                paginBlock.style.width = parseInt(paginBlock.dataset.width) - 20 + 'px'
-            }
-        }
-    }
-    else {
-        // pagination.style.transform = 'translateX(-20px)'
-    }
+    }, 10);
+
 
     // const bulletElems = pagination.querySelectorAll('.swiper-pagination-bullet')
     // const bulletActive = pagination.querySelector('.swiper-pagination-bullet-active')
