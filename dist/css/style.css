@@ -1452,7 +1452,7 @@ a.c-contacts:active {
 
 .menu__copyright {
   display: none;
-  margin-top: 27px;
+  margin-top: auto;
 }
 
 .nav__list {
@@ -2747,7 +2747,7 @@ a.c-contacts:active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 27px;
+    margin: 24px 0;
   }
 
   .yestim_main {
@@ -2780,7 +2780,7 @@ a.c-contacts:active {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   body {
     font-size: 15px;
   }
@@ -3104,7 +3104,7 @@ a.c-contacts:active {
 
 .webp .btn::after{ background: center/calc(100% - 2px) 53px no-repeat url(../img/btn-border.webp); }
 
-@media (max-width: 425px){
+@media (max-width: 430px){
 
   .webp .btn::after{ background-image: url(../img/btn-border-large.webp); }
 }
