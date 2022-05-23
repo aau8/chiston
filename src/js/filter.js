@@ -1,28 +1,33 @@
-import Swiper, { Grid, Pagination } from "swiper";
+import Swiper, { Pagination, Navigation } from "swiper";
 import { renderPagination, breakpointsSlider, swiperAfterInit } from "./sliders.js";
 
 const servicesSlider = new Swiper('.services__slider', {
-    modules: [ Grid, Pagination ],
+    modules: [ Pagination, Navigation ],
 
     breakpoints: breakpointsSlider,
 
     pagination: {
         el: '.services__slider-pagination',
-        clickable: true,
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
+        type: 'fraction',
     },
 
-    on: {
-        paginationUpdate: renderPagination,
-        afterInit: swiperAfterInit
-    }
+    navigation: {
+        prevEl: '.services__slider-arrow_prev',
+        nextEl: '.services__slider-arrow_next',
+    },
+
+    // pagination: {
+    //     el: '.services__slider-pagination',
+    //     clickable: true,
+    //     dynamicBullets: true,
+    //     dynamicMainBullets: 3,
+    // },
+
+    // on: {
+    //     paginationUpdate: renderPagination,
+    //     afterInit: swiperAfterInit
+    // }
 });
-
-// document.addEventListener('load', e => {
-
-// })
-
 
 const filter = document.querySelector('.services__filter')
 const selectFilterElems = filter.querySelectorAll('.services__select')

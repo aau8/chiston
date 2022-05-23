@@ -36,7 +36,12 @@
     margin-top: 25px;
 
     & .c-service {
+        min-height: 296px;
         height: calc((100% - 30px) / 2) !important;
+
+        @media (max-width: $tablet) {
+            min-height: 250px;
+        }
     }
 }
 
